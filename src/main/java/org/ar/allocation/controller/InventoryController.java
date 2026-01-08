@@ -1,8 +1,11 @@
 package org.ar.allocation.controller;
 
-import org.ar.allocation.response.InventoryResponse;
+import org.ar.allocation.response.BookingInventoryResponse;
+import org.ar.allocation.response.FlightInventoryResponse;
 import org.ar.allocation.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +18,13 @@ public class InventoryController {
     @Autowired
     private InventoryService inventoryService;
 
-    public List<InventoryResponse> getAllSeats() {
+    @GetMapping("/inventory/bookings")
+    public List<BookingInventoryResponse> getAllBookings() {
         return inventoryService.getAllBookings();
+    }
+
+    @GetMapping("/inventory/flights/{flightId}")
+    public FlightInventoryResponse getFlightInfo(@PathVariable("flightId") Long flightId) {
+        return inventoryService.getFlightInfo(flightId);
     }
 }

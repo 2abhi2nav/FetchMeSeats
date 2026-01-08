@@ -1,4 +1,7 @@
 package org.ar.allocation.repository;
 
-public interface FlightRepository {
+import org.ar.allocation.entity.Flight;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface FlightRepository extends JpaRepository<Flight, Long> {
 }

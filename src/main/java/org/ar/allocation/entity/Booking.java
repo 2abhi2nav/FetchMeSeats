@@ -23,5 +23,5 @@ public class Booking {
 
     @ManyToOne
     @JoinColumn(name = "flight_id")
-    private Long flightId;
+    private Flight flight;
 }
