@@ -10,9 +10,9 @@ import org.ar.allocation.entity.Flight;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookingInventoryResponse {
+public class ZoneInventoryResponse {
 
-    private Long id;
-    private Long seatCount;
+    private String name;
+    private Long capacity;
     private Flight flight;
 }

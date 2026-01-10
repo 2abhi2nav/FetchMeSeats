@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FlightInventoryResponse {
 
-    private Long id;
     private String name;
     private String destination;
     private Long capacity;

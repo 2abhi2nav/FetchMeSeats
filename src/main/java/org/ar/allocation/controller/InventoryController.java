@@ -1,6 +1,6 @@
 package org.ar.allocation.controller;
 
-import org.ar.allocation.response.BookingInventoryResponse;
+import org.ar.allocation.response.ZoneInventoryResponse;
 import org.ar.allocation.response.FlightInventoryResponse;
 import org.ar.allocation.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +18,9 @@ public class InventoryController {
     @Autowired
     private InventoryService inventoryService;
 
-    @GetMapping("/inventory/bookings")
-    public List<BookingInventoryResponse> getAllBookings() {
-        return inventoryService.getAllBookings();
+    @GetMapping("/inventory/zones")
+    public List<ZoneInventoryResponse> getAllZones() {
+        return inventoryService.getAllZones();
     }
 
     @GetMapping("/inventory/flights/{flightId}")

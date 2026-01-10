@@ -11,15 +11,18 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "booking")
-public class Booking {
+@Table(name = "zone")
+public class Zone {
 
     @Id
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "seat_count")
-    private Long seatCount;
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "capacity")
+    private Long capacity;
 
     @ManyToOne
     @JoinColumn(name = "flight_id")
