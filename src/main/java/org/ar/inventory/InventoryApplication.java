@@ -1,13 +1,13 @@
-package org.ar.allocation;
+package org.ar.inventory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AllocationApplication {
+public class InventoryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AllocationApplication.class, args);
+		SpringApplication.run(InventoryApplication.class, args);
 	}
 
 }

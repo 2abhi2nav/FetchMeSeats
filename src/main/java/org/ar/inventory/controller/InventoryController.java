@@ -1,8 +1,8 @@
-package org.ar.allocation.controller;
+package org.ar.inventory.controller;
 
-import org.ar.allocation.response.ZoneInventoryResponse;
-import org.ar.allocation.response.FlightInventoryResponse;
-import org.ar.allocation.service.InventoryService;
+import org.ar.inventory.response.ZoneInventoryResponse;
+import org.ar.inventory.response.FlightInventoryResponse;
+import org.ar.inventory.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

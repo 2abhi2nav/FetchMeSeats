@@ -1,4 +1,4 @@
-package org.ar.allocation.entity;
+package org.ar.inventory.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

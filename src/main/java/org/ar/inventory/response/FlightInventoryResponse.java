@@ -1,4 +1,4 @@
-package org.ar.allocation.response;
+package org.ar.inventory.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

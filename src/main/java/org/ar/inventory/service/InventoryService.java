@@ -1,11 +1,11 @@
-package org.ar.allocation.service;
+package org.ar.inventory.service;
 
-import org.ar.allocation.entity.Zone;
-import org.ar.allocation.entity.Flight;
-import org.ar.allocation.repository.ZoneRepository;
-import org.ar.allocation.repository.FlightRepository;
-import org.ar.allocation.response.ZoneInventoryResponse;
-import org.ar.allocation.response.FlightInventoryResponse;
+import org.ar.inventory.entity.Zone;
+import org.ar.inventory.entity.Flight;
+import org.ar.inventory.repository.ZoneRepository;
+import org.ar.inventory.repository.FlightRepository;
+import org.ar.inventory.response.ZoneInventoryResponse;
+import org.ar.inventory.response.FlightInventoryResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

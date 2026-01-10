@@ -1,10 +1,10 @@
-package org.ar.allocation.response;
+package org.ar.inventory.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.ar.allocation.entity.Flight;
+import org.ar.inventory.entity.Flight;
 
 @Data
 @Builder

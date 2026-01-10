@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.ar</groupId>
-	<artifactId>allocation</artifactId>
+	<artifactId>inventory</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>allocation</name>
-	<description>Blockwise seat allocation system</description>
+	<name>inventory</name>
+	<description>Holds details about seat availability</description>
 	<url/>
 	<licenses>
 		<license/>
