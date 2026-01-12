@@ -11,7 +11,7 @@
 	<groupId>org.ar</groupId>
 	<artifactId>booking</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Booking Service</name>
+	<name>Booking</name>
 	<description>Booking service for the ticket booking application</description>
 	<url/>
 	<licenses>
