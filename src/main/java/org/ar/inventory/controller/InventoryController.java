@@ -23,6 +23,11 @@ public class InventoryController {
         return inventoryService.getAllZones();
     }
 
+    @GetMapping("/inventory/zone/{zoneId}")
+    public ZoneInventoryResponse getZoneInfo(@PathVariable("zoneId") Long zoneId) {
+        return inventoryService.getZoneInfo(zoneId);
+    }
+
     @GetMapping("/inventory/flights/{flightId}")
     public FlightInventoryResponse getFlightInfo(@PathVariable("flightId") Long flightId) {
         return inventoryService.getFlightInfo(flightId);

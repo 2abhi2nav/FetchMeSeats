@@ -31,6 +31,18 @@ public class InventoryService {
                 .build()).collect(Collectors.toList());
     }
 
+    public ZoneInventoryResponse getZoneInfo(Long zoneId) {
+        final Zone zone = zoneRepository.findById(zoneId).orElse(null);
+
+        return ZoneInventoryResponse.builder()
+                .id(zone.getId())
+                .name(zone.getName())
+                .capacity(zone.getCapacity())
+                .ticketPrice(zone.getTicketPrice())
+                .flight(zone.getFlight())
+                .build();
+    }
+
     public FlightInventoryResponse getFlightInfo(Long flightId) {
         final Flight flight = flightRepository.findById(flightId).orElse(   null);
 

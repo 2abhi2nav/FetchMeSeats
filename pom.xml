@@ -11,7 +11,7 @@
 	<groupId>org.ar</groupId>
 	<artifactId>inventory</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Inventory Service</name>
+	<name>Inventory</name>
 	<description>Inventory service for the ticket booking application</description>
 	<url/>
 	<licenses>
