@@ -24,32 +24,36 @@ public class InventoryService {
     public List<ZoneInventoryResponse> getAllZones() {
         final List<Zone> zones = zoneRepository.findAll();
 
-        return zones.stream().map(zone -> ZoneInventoryResponse.builder()
-                .name(zone.getName())
-                .capacity(zone.getCapacity())
-                .flight(zone.getFlight())
-                .build()).collect(Collectors.toList());
+        return zones.stream().map(
+                zone -> new ZoneInventoryResponse(
+                        zone.getId(),
+                        zone.getName(),
+                        zone.getCapacity(),
+                        zone.getTicketPrice(),
+                        zone.getFlight()
+                )
+        ).collect(Collectors.toList());
     }
 
     public ZoneInventoryResponse getZoneInfo(Long zoneId) {
         final Zone zone = zoneRepository.findById(zoneId).orElse(null);
 
-        return ZoneInventoryResponse.builder()
-                .id(zone.getId())
-                .name(zone.getName())
-                .capacity(zone.getCapacity())
-                .ticketPrice(zone.getTicketPrice())
-                .flight(zone.getFlight())
-                .build();
+        return new ZoneInventoryResponse(
+                zone.getId(),
+                zone.getName(),
+                zone.getCapacity(),
+                zone.getTicketPrice(),
+                zone.getFlight()
+        );
     }
 
     public FlightInventoryResponse getFlightInfo(Long flightId) {
-        final Flight flight = flightRepository.findById(flightId).orElse(   null);
+        final Flight flight = flightRepository.findById(flightId).orElse(null);
 
-        return FlightInventoryResponse.builder()
-                .name(flight.getName())
-                .destination(flight.getDestination())
-                .capacity(flight.getCapacity())
-                .build();
+        return new FlightInventoryResponse(
+                flight.getName(),
+                flight.getDestination(),
+                flight.getCapacity()
+        );
     }
 }

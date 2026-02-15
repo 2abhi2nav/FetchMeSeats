@@ -1,4 +1,4 @@
-CREATE TABLE reservation (
+CREATE TABLE booking (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     total DECIMAL(10, 2) NOT NULL,
     seatCount BIGINT NOT NULL,

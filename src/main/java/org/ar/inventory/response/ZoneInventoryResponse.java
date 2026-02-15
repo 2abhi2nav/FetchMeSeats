@@ -17,6 +17,6 @@ public class ZoneInventoryResponse {
     private Long id;
     private String name;
     private Long capacity;
-    private BigDecimal ticketPrice;
+    private BigDecimal seatPrice;
     private Flight flight;
 }
