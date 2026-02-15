@@ -1,0 +1,5 @@
+<packaging>pom</packaging>
+<modules>
+    <module>inventory</module>
+    <module>booking</module>
+</modules>
