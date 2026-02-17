@@ -2,11 +2,11 @@ package org.ar.booking.service;
 
 import org.ar.booking.client.InventoryClient;
 import org.ar.booking.entity.Passenger;
-import org.ar.booking.event.BookingEvent;
 import org.ar.booking.repository.PassengerRepository;
 import org.ar.booking.request.BookingRequest;
 import org.ar.booking.response.BookingResponse;
 import org.ar.booking.response.InventoryResponse;
+import org.ar.shared.event.BookingEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;

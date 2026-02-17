@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.ar</groupId>
-	<artifactId>booking</artifactId>
+	<artifactId>order</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Booking</name>
-	<description>Booking service for the ticket booking application</description>
+	<name>Order</name>
+	<description>Order service for the ticket booking application</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -29,6 +29,7 @@
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+
 	<dependencies>
         <dependency>
             <groupId>org.ar</groupId>
@@ -74,10 +75,6 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
 	</dependencies>
 
 	<build>
