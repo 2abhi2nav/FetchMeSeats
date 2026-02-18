@@ -1,7 +1,7 @@
-CREATE TABLE booking (
+CREATE TABLE order (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    total DECIMAL(10, 2) NOT NULL,
-    seatCount BIGINT NOT NULL,
+    total_price DECIMAL(10, 2) NOT NULL,
+    seat_count BIGINT NOT NULL,
     booked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     passenger_id BIGINT,
     zone_id BIGINT,
