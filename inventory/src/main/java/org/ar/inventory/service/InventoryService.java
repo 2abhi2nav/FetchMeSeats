@@ -56,4 +56,11 @@ public class InventoryService {
                 flight.getCapacity()
         );
     }
+
+    public void updateZoneCapacity(Long zoneId, Long seatsBooked) {
+        final Zone zone = zoneRepository.findById(zoneId).orElse(null);
+
+        zone.setCapacity(zone.getCapacity() - seatsBooked);
+        zoneRepository.saveAndFlush(zone);
+    }
 }

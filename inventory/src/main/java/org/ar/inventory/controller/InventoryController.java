@@ -4,10 +4,8 @@ import org.ar.inventory.response.ZoneInventoryResponse;
 import org.ar.inventory.response.FlightInventoryResponse;
 import org.ar.inventory.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,8 +26,17 @@ public class InventoryController {
         return inventoryService.getZoneInfo(zoneId);
     }
 
-    @GetMapping("/inventory/flights/{flightId}")
+    @GetMapping("/inventory/flight/{flightId}")
     public FlightInventoryResponse getFlightInfo(@PathVariable("flightId") Long flightId) {
         return inventoryService.getFlightInfo(flightId);
+    }
+
+    @PutMapping("/inventory/zone/{zoneId}/capacity/{capacity}")
+    public ResponseEntity<Void> updateZoneCapacity(
+            @PathVariable("zoneId") Long zoneId,
+            @PathVariable("capacity") Long seatsBooked
+    ) {
+        inventoryService.updateZoneCapacity(zoneId, seatsBooked);
+        return ResponseEntity.ok().build();
     }
 }
