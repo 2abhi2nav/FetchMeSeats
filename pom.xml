@@ -20,6 +20,7 @@
 
     <modules>
         <module>shared</module>
+        <module>apigateway</module>
         <module>inventory</module>
         <module>booking</module>
         <module>order</module>
