@@ -18,7 +18,7 @@ public class InventoryRoutes {
 
         return GatewayRouterFunctions.route("inventory-service")
                 .route(path("/api/v1/inventory/**"), http())
-                .before(uri("http://localhost/8080"))
+                .before(uri("http://localhost:8080"))
                 .build();
     }
 }

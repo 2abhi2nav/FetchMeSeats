@@ -18,7 +18,7 @@ public class BookingRoutes {
 
         return route("booking_routes")
                 .route(path("/api/v1/booking/**"), http())
-                .before(uri("http://localhost/8081"))
+                .before(uri("http://localhost:8081"))
                 .build();
     }
 }
